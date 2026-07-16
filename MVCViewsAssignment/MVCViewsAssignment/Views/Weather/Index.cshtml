@@ -1,0 +1,80 @@
+﻿@model IEnumerable<CityWeather>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="~/style.css" />
+</head>
+<body>
+    @* <div class="search">
+        <input type="text" placeholder="Enter city name" spellcheck="false" />
+        <a href=""><img src="~/images/search.png" /></a>
+    </div> *@
+    <div class="container">
+        @foreach (var cityWeather in Model)
+        {
+            <div class="card">
+
+                @* <div class="error">Invalid City name</div> *@
+
+        
+                <div>
+                    @if (cityWeather.weather == "Clouds")
+                    {
+                        <img src="~/images/clouds.png" class="weather-icon" />
+                    }
+                    else if (cityWeather.weather == "Clear")
+                    {
+                        <img src="~/images/clear.png" class="weather-icon" />
+                    }
+                    else if (cityWeather.weather == "Drizzle")
+                    {
+                        <img src="~/images/drizzle.png" class="weather-icon" />
+                    }
+                    else if (cityWeather.weather == "Rain")
+                    {
+                        <img src="~/images/rain.png" class="weather-icon" />
+                    }
+                    else if (cityWeather.weather == "Mist")
+                    {
+                        <img src="~/images/mist.png" class="weather-icon" />
+                    }
+                    else if (cityWeather.weather == "Snow")
+                    {
+                        <img src="~/images/snow.png" class="weather-icon" />
+                    }
+                    else if (cityWeather.weather == "Smoke")
+                    {
+                        <img src="~/images/smoke.png" class="weather-icon" />
+                    }
+                    <h1 class="temp">@cityWeather.TemperatureFahrenheit°C</h1>
+                    <h2 class="city">@cityWeather.CityName</h2>
+                    <div class="details">
+                        <div class="col">
+                            <img src="~/images/humidity.png" />
+                            <div>
+                                <p class="humidity">@cityWeather.humidity%</p>
+                                <p>Humidity</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="~/images/wind.png" />
+                            <div>
+                                <p class="Wind">@cityWeather.windSpeed km/h</p>
+                                <p>Wind Speed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/Weather/@cityWeather.CityUniqeCode"><img src="~/images/search.png" class="back-Search" /></a>
+                </div>
+            </div>
+
+    
+        }
+    </div>
+    
+</body>
+</html>

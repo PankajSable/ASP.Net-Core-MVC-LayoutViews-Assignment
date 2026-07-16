@@ -1,0 +1,16 @@
+wwwroot\images\back.png
+wwwroot\images\bg.png
+wwwroot\images\bg2.png
+wwwroot\images\clear.png
+wwwroot\images\clouds.png
+wwwroot\images\drizzle.png
+wwwroot\images\humidity.png
+wwwroot\images\logo.png
+wwwroot\images\mist.png
+wwwroot\images\rain.png
+wwwroot\images\search.png
+wwwroot\images\smoke.png
+wwwroot\images\snow.png
+wwwroot\images\wind.png
+wwwroot\style.css
+C:\.netNotes\MVCViewsAssignment\MVCViewsAssignment\wwwroot\style.css

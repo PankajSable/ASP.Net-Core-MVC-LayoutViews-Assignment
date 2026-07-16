@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <!-- Header: Logo, Brand Name (centered), Reload button -->
+    <div class="header">
+        <div class="logo-wrap">
+            <!-- Replace "your-logo.png" with the path/URL to your own logo image -->
+            <img src="~/images/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="brand-name">Weather App</div>
+        <button class="reload-btn" title="Reload">&#8635;</button>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Code With Pankaj
+    </div>
+</body>
+</html>
